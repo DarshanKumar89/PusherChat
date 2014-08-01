@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Realtime Chat Widget using Pusher</title>
+    
+    <link rel="stylesheet/less" type="text/css" href="lib/twitter-bootstrap/lib/bootstrap.less">
+    <script src="lib/less/less-1.1.5.min.js"></script>
+    
+    <link href="styles.css" rel="stylesheet" />
+    <link href="pusher-chat-widget.css" rel="stylesheet" />
+    
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://js.pusher.com/1.12/pusher.min.js"></script>
+    <script src="js/PusherChatWidget.js"></script>    
+    <script>
+      $(function() {     
+        var pusher = new Pusher('0ef8a39a0fac0ce8ff0a')
+        var chatWidget = new PusherChatWidget(pusher, {
+          appendTo: "#pusher_chat_widget"
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="topbar">
+        <div class="fill">
+          <div class="container">
+            <a class="brand" href="/"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-unit">
+        
+      </div>
+      
+      <section class="realtime-chat">
+        
+        <div class="page-header">
+          <h1>Realtime Chat Widget Example</h1>
+        </div>
+        
+        <div class="row">
+          
+          <div class="span5">
+           
+          </div>
+          <div class="span5" id="pusher_chat_widget">
+          </div>
+          
+        </div>
+        
+      </section>
+
+      <footer>
+        <p></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
